@@ -1,10 +1,11 @@
 class Technology:
 	technology_list: list["Technology"] = []
-	def __init__(self, name: str, requirement: "Technology | None", research_length: int, required_milestone: int):
+	def __init__(self, name: str, requirement: "Technology | None", research_length: int, required_milestone: int, called_function: "function | None" = None):
 		self.name = name
 		self.requirement = requirement
 		self.research_length = research_length
 		self.required_milestone = required_milestone
+		self.called_function = called_function
 		self.finished = False
 
 		Technology.technology_list.append(self)
@@ -25,6 +26,7 @@ if __name__() == "__main__":
 	print("TECH LIST:",Technology.technology_list)
 	print("EXAMPLE TECH:",spear)
 	print("IS UNLOCKABLE:",spear.is_unlockable())
+
 
 
 
