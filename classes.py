@@ -23,8 +23,9 @@ class Technology:
 if __name__() == "__main__":
 	spear = Technology("Spear", None, 1, 0)
 	print("TECH LIST:",Technology.technology_list)
-
 	print("EXAMPLE TECH:",spear)
+	print(spear.is_unlockable())
+
 
 
 
