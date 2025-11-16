@@ -21,11 +21,12 @@ class Technology:
 		return False
 
 # Test:
-if __name__() == "__main__":
+if __name__ == "__main__":
 	spear = Technology("Spear", None, 1, 0)
 	print("TECH LIST:",Technology.technology_list)
 	print("EXAMPLE TECH:",spear)
 	print("IS UNLOCKABLE:",spear.is_unlockable())
+
 
 
 
