@@ -10,7 +10,7 @@ class Technology:
 		Technology.technology_list.append(self)
 
 	def __repr__(self):
-		return  f"Technology(name={self.name!r}, requirement={self.requirement and self.requirement.name!r})"
+		return  f"Technology(name={self.name!r}, requirement={self.requirement and self.requirement.name!r},research_length={self.research_length!r},required_milestone={self.required_milestone!r})"
 
 	def is_finished(self):
 		if requirement == None:
@@ -25,5 +25,6 @@ if __name__() == "__main__":
 	print("TECH LIST:",Technology.technology_list)
 
 	print("EXAMPLE TECH:",spear)
+
 
 
