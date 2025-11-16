@@ -13,7 +13,9 @@ class Technology:
 		return  f"Technology(name={self.name!r}, requirement={self.requirement and self.requirement.name!r})"
 
 	def is_finished(self):
-		if requirement.finished:
+		if requirement == None:
+			return True
+		elif requirement.finished:
 			return True
 		return False
 
@@ -23,4 +25,5 @@ if __name__() == "__main__":
 	print("TECH LIST:",Technology.technology_list)
 
 	print("EXAMPLE TECH:",spear)
+
 
