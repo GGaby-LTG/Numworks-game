@@ -1,8 +1,8 @@
 class Technology:
 	technology_list: list["Technology"] = []
-	def __init__(self, name: str, requirements: "Technology | None", research_length: int, required_milestone: int):
+	def __init__(self, name: str, requirement: "Technology | None", research_length: int, required_milestone: int):
 		self.name = name
-		self.requirements = requirements
+		self.requirement = requirement
 		self.research_length = research_length
 		self.required_milestone = required_milestone
 		self.finished = False
@@ -10,10 +10,10 @@ class Technology:
 		Technology.technology_list.append(self)
 
 	def __repr__(self):
-		return  f"Technology(name={self.name!r}, requirements={self.requirements and self.requirements.name!r})"
+		return  f"Technology(name={self.name!r}, requirement={self.requirement and self.requirement.name!r})"
 
 	def is_finished(self):
-		if requirements.finished:
+		if requirement.finished:
 			return True
 		return False
 
@@ -23,3 +23,4 @@ if __name__() == "__main__":
 	print("TECH LIST:",Technology.technology_list)
 
 	print("EXAMPLE TECH:",spear)
+
