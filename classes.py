@@ -13,9 +13,9 @@ class Technology:
 		return  f"Technology(name={self.name!r}, requirement={self.requirement and self.requirement.name!r},research_length={self.research_length!r},required_milestone={self.required_milestone!r})"
 
 	def is_unlockable(self):
-		if requirement == None:
+		if self.requirement == None:
 			return True
-		elif requirement.finished:
+		elif self.requirement.finished:
 			return True
 		return False
 
@@ -24,7 +24,8 @@ if __name__() == "__main__":
 	spear = Technology("Spear", None, 1, 0)
 	print("TECH LIST:",Technology.technology_list)
 	print("EXAMPLE TECH:",spear)
-	print(spear.is_unlockable())
+	print("IS UNLOCKABLE:",spear.is_unlockable())
+
 
 
 
