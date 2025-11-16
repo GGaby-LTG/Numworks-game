@@ -12,7 +12,7 @@ class Technology:
 	def __repr__(self):
 		return  f"Technology(name={self.name!r}, requirement={self.requirement and self.requirement.name!r},research_length={self.research_length!r},required_milestone={self.required_milestone!r})"
 
-	def is_finished(self):
+	def is_unlockable(self):
 		if requirement == None:
 			return True
 		elif requirement.finished:
@@ -25,6 +25,7 @@ if __name__() == "__main__":
 	print("TECH LIST:",Technology.technology_list)
 
 	print("EXAMPLE TECH:",spear)
+
 
 
 
