@@ -12,10 +12,14 @@ class Technology:
 	def __repr__(self):
 		return  f"Technology(name={self.name!r}, requirements={self.requirements and self.requirements.name!r})"
 
-	# TODO: add is_unlockable()
+	def is_finished(self):
+		if requirements.finished:
+			return True
+		return False
 
 # Test:
 if __name__() == "__main__":
 	spear = Technology("Spear", None, 1, 0)
 	print("TECH LIST:",Technology.technology_list)
+
 	print("EXAMPLE TECH:",spear)
